@@ -1,0 +1,18 @@
+# In exercise.yaml, add information for a person object. This person object consists of the following, all at the top level:
+# A name key
+# An age key
+# A list called hobbies that contains at least two hobbies
+
+name: Dino
+age: 29
+hobbies:
+- tennis
+- cooking
+- street workout
+
+# `all at the top level´ means that the keys and values should be directly under the root level of YAML
+# document and should not be nested within any other data structures like dictionaries or lists
+
+# In our exercise means that keys name, age and hobbies should not be indented or nested within any other
+# structure (should be first-level elements of YAML document)
+
