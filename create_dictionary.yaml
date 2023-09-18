@@ -1,0 +1,10 @@
+value:
+  banana: 4
+  computer: 2
+  spoon: 15
+  lamp: 7
+  dogs: 26
+
+# The key is ("value") and it maps to nested dictionary with five
+# key-value pairs (4, 2, 15, 7, 26), where each item (banana, computer,
+# spoon, lamp, dogs) is indented (double space) beneath the "value" key

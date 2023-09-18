@@ -1,0 +1,9 @@
+[yaml, php, java, c#]
+
+# We can also add spaces in between these items (not recommended)
+# If you add any spaces when you are using flow style, these spaces are not the part
+# of indentation that YAML used to parse a structure. and they are neither
+# a part of the content
+# If you try to save a file written with spaces and indentations it will autoformat if
+# you have auto-format extensions installed
+

@@ -1,0 +1,13 @@
+language: yaml
+version: 1.2.2
+---
+We can have something new in here
+#key: value # This returns error. We have only one scalar above and if the first line in the
+# document doesn't start with a key next line cannot either
+# In order to fix this we can add --- between line 4 and 5
+---
+key: value
+---
+# from line 9 and 11 we see that duplicate keys are allowed as lon as they are not in the same YAML document
+key: value
+

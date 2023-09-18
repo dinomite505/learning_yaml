@@ -1,0 +1,11 @@
+key: value
+"data serialization language": yaml
+# This key can be anything and it can also contain spaces if you surround it with quotes.
+# We can se we can list multiple key-value pairs or mappings underneath each other
+version: 1.2 # you can also add the number as a value
+list:
+  - java
+  - python
+  - c#
+  - php
+# created a list as a value for my key-value pair (my mapping)

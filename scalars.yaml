@@ -1,0 +1,22 @@
+# for string types
+name: dino
+noquotes: whatever without quotes
+quotes: "whatever with quotes"
+single: 'whatever in single quotes'
+escape: "he said: \"escaping can only be done when double quoted\"" # example of double quoted string in YAML
+
+# for integer types
+float: 1.2 # a floating-point number. Scalars can represent numeric values.
+octal: 0121 # if we need more than eight digits we need (e.g. for a phone number) we need to put it under quotes to create a literal value
+# number 8 in this case is not a part of octal value system so it would turn your numeric value into a string scalar
+hexadecimal: 0xABC # start with 0x
+
+boolean: true
+nothing: null
+# blue indicator by both true and null shows that it is a special value
+
+duplicateKeys: not allowed
+# cannot be repeated, if you would write 'nothing' or 'boolean' again in your code it would give you an error
+"123a lot of weird stuff": can be used as duplicateKeys
+moreWeirdStuff: '# This is not a ''comment''' # for advanced syntax module
+

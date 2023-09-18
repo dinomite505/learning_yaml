@@ -1,0 +1,8 @@
+- red apple
+- blue tomato
+- [list, as, list, item]
+
+# On line three, the third item on our main list is its own list
+# consisting of four items. Appropriate way of combining block and flow style.
+
+
