@@ -1,0 +1,86 @@
+# show for folding: > and |
+# show for chomping: + - and nothing
+# line 5 and 6 are just text lines, line 7 is a white, line 8, 9 and 10 are more lines with line 9 being indented and some trailing newlines underneath the text
+
+multi-line: > # Folding Indicator: >
+  Here is some text across multiple lines,
+  important to include some white space:
+
+  And some
+    more indentation
+  And some trailing newlines.
+
+
+
+# '>' indicates the folded style adn preserves newlines within the text but removes leading trailing whitespace (indentation) on each line
+# it does not keep trailing empty lines
+---
+multi-line: >+ # Folding Indicator with Keep Chomping: >+
+  Here is some text across multiple lines,
+  important to include some white space:
+
+  And some
+    more indentation
+  And some trailing newlines.
+
+
+
+
+# also folded style like '>', preserving newlines and removing leading and trailing whitespace
+# it keeps any trailing empty lines so it would keep empty lines under 'And some trailing newlines'
+---
+multi-line: >- # Folding Indicator with Strip Chomping: >-
+  Here is some text across multiple lines,
+  important to include some white space:
+
+  And some
+    more indentation
+  And some trailing newlines.
+
+
+
+
+# also folded style, preserving newlines and removing leading and trailing whitespace
+# it strips trailing empty (it would remove lines under 'And some trailing newlines')
+---
+multi-line: | # Literal Style: |
+  Here is some text across multiple lines,
+  important to include some white space:
+
+  And some
+    more indentation
+  And some trailing newlines.
+
+
+
+
+# '|' indicates literal style. It preserves newlines and all leading/trailing whitespace exactly as it appears in the block
+# it does not keep trailing empty lines under 'And some trailing newlines'
+---
+multi-line: |+ # Literal Style with Keep Chomping : |+
+  Here is some text across multiple lines,
+  important to include some white space:
+
+  And some
+    more indentation
+  And some trailing newlines.
+
+
+
+
+# indicates the literal style, preserving newlines and all leading/trailing whitespace
+# it keeps any trailing empty lines (so it would keep 4 empty lines under 'And some trailing newlines')
+---
+multi-line: |- # Literal Style with Strip Chomping : |-
+  Here is some text across multiple lines,
+  important to include some white space:
+
+  And some
+    more indentation
+  And some trailing newlines.
+
+
+
+
+# indicates the literal style, preserving newlines and all leading/trailing whitespace
+# it strips trailing empty lines, so it would remove lines after the 'And some trailing newlines'
