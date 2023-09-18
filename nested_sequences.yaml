@@ -1,0 +1,22 @@
+- [programming, coding, scripting]
+- [data serialization, serializing]
+---
+#list which contains two lists and those list contain 3 items each
+value:
+- - programming
+  - coding
+  - scripting
+- - data serialization
+  - serializing
+  - async
+
+
+
+# you cannot do this!  
+# some sort of combination where the flow style is trying to give this block style notation
+# You can use flow style inside of the block style, but not the other way around.
+
+#- [ - programming
+#    -
+#    ] 
+
