@@ -1,0 +1,4 @@
+no_date: !!str 2023-09-19 # not a date, but a string
+no_number: !!str 20 # also
+unnecessary: !!int 20 # silly example. We can explicitly type a node with the type that YAMl would have given it anyways
+

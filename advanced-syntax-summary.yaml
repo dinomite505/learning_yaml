@@ -1,0 +1,26 @@
+# On the line 1 we see a mapping containing a list of mappings (-name and - <<: *someperson)
+persons:
+  # Here is a node (&someperson) spanning from line 4 up until line 13
+  &someperson
+  - name: Dino
+    age: 29
+    address:
+      streetname: Happy Blvd
+      number: 137
+      zipcode: 85051
+      city: Ingolstadt
+      country: Germany
+    phone: !!str 061234567 # Explicit typing with string to indicate that is a string and not a number
+  - <<: *someperson # Here we are repeating the node from line 4 in the next item of our person's list
+    # Using the merge key above, we are specifying that we want to have a different name, address and that we want to add a date
+    name: Jack
+    address: { streetname: Happy Blvd, number: 137 }
+    birthday: 1993-02-19
+description: <-
+  Some important description that will span to multiple lines.
+  These are not interpreted as new lines because of < indicator for folding.
+  Also, trailing new lines are going to be ignored due to the chomping -.
+
+# On line 19 we see a multi-line string and using < sign we indicate that we want to have a new lines
+# not interpreted as new lines for our folding option. Minus (-) sign in front means that the trailing new lines
+# at the end are going to be ignored due to chomping choice.

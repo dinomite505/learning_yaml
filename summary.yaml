@@ -10,7 +10,7 @@ this is a new document
 I can also create as many in one file as I like
 ---
 scalars: "with double quotes"
-escaping: "witha backslash\\ and we can create new lines \n like this"
+escaping: "with a backslash\\ and we can create new lines \n like this"
 single: 'also single quotes, useful if we want to use "" in our scalar'
 
 decimal: 221232
