@@ -1,0 +1,29 @@
+person:
+  name: Dino
+  age: 29
+  address:
+    streetname: Champions Blvd
+    number: 77
+    zipcode: 85051
+    city: Ingolstadt
+    country: Germany
+
+# here we see a person mapping and this mapping is containing 
+# three other mapping (name, age, address) and address is containig five other mappings
+# (streetname, number, zipcode, city and country)
+---
+person:
+  name: Dino
+  age: 29
+  address:
+    streetname: Champions Blvd
+    number: 77
+    zipcode: 85051
+    city: Ingolstadt
+    country: Germany
+  dog: { name: Speedy, breed: Dachshund }
+
+
+# here we see that we can combine flow style with block style
+# we added a dog to our person so god can actually contain a mapping in the flow style
+# other way around is not possible; we cannot use the block style inside the flow style

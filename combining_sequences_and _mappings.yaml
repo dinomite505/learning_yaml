@@ -1,0 +1,18 @@
+persons:
+  - name: dino
+    age: 29
+    address:
+      streetname: Happy Street
+      number: 174
+      zipcode: 57329
+      city: Milano
+      country: Italy
+  - name: gia
+    age: 26
+    adress: {streetname: Rainy Street, number: 88,}
+
+
+  # Example shows how mappings of mappings are combined inside a sequence items
+  # On line 12 we can see that flow style can be incorporated together with a block style,
+  # but it is not the best practice to combine it randomly
+
