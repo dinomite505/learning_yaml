@@ -1,0 +1,7 @@
+# YAML sequence
+groceries:
+  - eggs
+  - strawberries
+  - milk
+  - potatoes
+
