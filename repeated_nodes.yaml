@@ -1,0 +1,65 @@
+key: &repeated Hi there!
+new_key: *repeated
+
+# Line 1. Here we see a key named 'key' and it contains a value of "Hi there!"
+# In front of the value we see the anchor name 'repeated' with ampersand in front of it
+# Line 2. Here we see a key named 'new_key' containing 'repeated' node indicated with asterisk (*) in front of it
+
+
+person: &person
+  name: Dino
+  age: 29
+  address:
+    streetname: Happy Blvd
+    number: 173
+    zipcode: 85051
+    city: Ingolstadt
+    country: Germany
+another_person: *person
+
+
+# This person contains a few mappings and an anchor name 'person'
+# This way we can have a full node (name, age, address) and everything else in it as a repeated node.
+# Mind if you're indenting out again (at the key 'another_person') our node ended,
+# meaning as long as we're not on the level of name, age or address anymore our node is done.
+# In key another_person on line 18 we are using our repeated node by specifying 'person' name with asterisk * in front
+---
+
+# REPEATED NODES MERGE
+
+person: &person
+  name: Dino
+  age: 29
+  address:
+    streetname: Happy Blvd
+    number: 173
+    zipcode: 85051
+    city: Ingolstadt
+    country: Germany
+
+another_person: *person
+
+# To overwrite the name
+yet_another_person:
+  <<: *person # Merging our person repeated node
+  name: Tommy # with a new value for name
+
+# ( <<: ) is a merge indicator
+# After using merging, on the next line we are specifying the part that we want to overwrite
+
+---
+
+config: &db
+  database_name: dbname
+  password: supertopsecret
+config_prod:
+  <<: *db
+  password: custompassword
+
+# Example
+
+
+
+
+
+

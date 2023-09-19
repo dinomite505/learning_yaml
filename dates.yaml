@@ -1,0 +1,6 @@
+timestamp: 2023-09-22T22:13:56.10+02:00
+simple_date: 2023-09-22
+not_a_date: !!str 2023-09-22
+
+# on line three, we hae a string, not a date. 
+# It is explicit type indicator '!!' that is telling YAML to make whatever follows the string type
