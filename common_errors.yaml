@@ -1,0 +1,18 @@
+# path_nope: "C:\Users\Not\a\great\idea"
+path_yes: 'C:\Users\Better\to\use\single\quotes'
+
+# Line 1 shows error because we cannot use double quotes when
+# escaping and backslashes
+
+octal_phone: 03012341234 # converted do 405389980
+real_phone: "03012341234" # or use a explicit type as a string with !!str
+
+duplicate_keys: are not allowed
+duplicate_keys_2: could come from changing JSON or XML to YAMl
+# added _2 to show it's not showing error if we don't have the same named key in one document
+
+# Accidental list entry
+question: "- no answer -" #if we want start a value with a dash we should use double quotes
+
+# List as keys in a mapping
+[not, all, languages]: would allow a list to be a key
