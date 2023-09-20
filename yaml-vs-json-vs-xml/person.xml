@@ -1,0 +1,22 @@
+<!-- person object (comments don't get lost wehn moving from XML to YAML) -->
+<person>
+    <name>Dino</name>
+    <age>30</age>
+    <address>
+        <streetname>Happy Blvd</streetname>
+        <number>137</number>
+        <zipcode>85051</zipcode>
+        <city>Ingolstadtd</city>
+        <country>Germany</country>
+    </address>
+    <hobbies> <!--it would get automatically parsed by some programing languages like in YAML file next to this where we have 'hobbies' and then the list. 
+                So <hobbies></hobbies> encapsulates whats inside so when parsing, we can actually get a list -->
+        <hobby>tennis</hobby>
+        <hobby>biking</hobby>
+        <hobby>playing guitar</hobby>
+        <hobby>video games</hobby>
+    </hobbies>
+</person>
+
+<!-- XML is a markup language, it is harder to read than YAML, but
+due to its well established option it can querry data in XML file-->

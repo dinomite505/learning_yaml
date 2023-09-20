@@ -1,0 +1,20 @@
+# person object
+person:
+  name: Dino
+  age: 29
+  address: # mapping of mappings
+    streetname: Happy Blvd
+    number: 137
+    zipcode: 85051
+    city: Ingolstadt
+    country: Germany
+  hobbies: # list
+    - tennis
+    - biking
+    - playing guitar
+    - video games
+
+# We have a JSON file in this folder but comments are not allowed in JSON and if we go from YAML to JSON comments get lost. 
+# Unlike YAML, we cannot use indentations to denote objects but curly and square brackets
+# String quotes are mandatory and must be double quotes
+# The root node must be an object or a list

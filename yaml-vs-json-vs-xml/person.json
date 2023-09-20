@@ -1,0 +1,19 @@
+{
+    "person": {
+        "name": "Dino",
+        "age": 30,
+        "address": {
+            "streetname": "Happy Blvd",
+            "number": 137,
+            "zipcode": "85051",
+            "city": "Ingolstadt",
+            "country": "Germany"
+        },
+        "hobbies": [
+            "tennis",
+            "biking",
+            "playing guitar",
+            "video games"
+        ]
+    }
+}
