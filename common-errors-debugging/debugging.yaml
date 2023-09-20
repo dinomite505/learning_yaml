@@ -1,0 +1,26 @@
+config:
+  path: "config/.../env.config"
+  options:
+    - debug: true
+    - secure_mode: false
+    - code: 01234 # If this stays like that, when you run python script it will output 668 because this is an octal value, so put this number under the quotes or explicit type to a string (!!str)
+  env: test
+  choices:
+     - "- nothing -"
+
+# When running our debugging.py script it outputs wrongly indented env and choices will output error stating problem on line 7, column 4:
+# while parsing a block mapping
+#  in "debugging.yaml", line 2, column 3
+# expected <block end>, but found '<block mapping start>'
+#  in "debugging.yaml", line 7, column 4
+# 
+# It is having a block mapping start where it expected the block ends. Align the indentation with column two to fix it.
+
+# Otherwise, with good indentations, when we run our debugging.py script it will output:
+# [['nothing -']] (aka still a problem)
+
+# on line 9 we are actually saying that we are having a list, and first list entry on list of lists
+# so it's not seeing this as a literal dash, but as and indication of a list
+# to fix this we put quotes over - nothing - not to create an accidental list entry
+# Running python script again it will output ['- nothing -'] so it's no longer a list item in the list but just a list with one item
+#  
