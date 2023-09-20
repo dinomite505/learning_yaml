@@ -1,0 +1,29 @@
+apiVersion: apps/v1.2
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.14.2
+          ports:
+            -containerPort: 80
+
+# Four key value pairs on line 1,2,3 an 7
+# Metadata on line 3 is mapping of mappings so if we would access the app in Python example we'd first for metadata key and so on.
+# Line 7, spec: replicas is containing an integer and then we have mapping of mappings in selector and template. Same goes for matchLabels, metadata and labels.
+# Line 16, spec: it has mapping 'containers' which is a list and this list is a group of mappings (because we created a new list on the line 18) but there are no list items, so 'containers' only
+# just have one list item that contains a 'name', 'image' and 'ports' (which is another sequence)
+
+# Using lines in VS code helps seeing indentations in the file
